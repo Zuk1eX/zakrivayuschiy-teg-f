@@ -4,3 +4,52 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+:root.theme-dark {
+  --fw-text: 465;
+  --fw-title: 785;
+  --color-bg: #000000;
+  --color-accent: #00cc14;
+  --color-stroke: #00cc14;
+  --color-like: #ff0000;
+  --bg-image: repeating-linear-gradient(
+      90deg,
+      #000000 0 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(180deg, #000000 0 2px, transparent 2px 4px),
+    linear-gradient(180deg, #007f0c 0.01%, #004306);
+}
+
+:root.theme-light {
+  --fw-text: 400;
+  --fw-title: 700;
+  --color-bg: #ffffff;
+  --color-accent: #000000;
+  --color-stroke: #ffffff;
+  --color-like: #ff0000;
+  --bg-image: repeating-linear-gradient(
+      90deg,
+      #d3d3d3 0 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(180deg, #d3d3d3 0 2px, transparent 2px 4px),
+    linear-gradient(180deg, #e7e7e7 0.01%, #1a1a1a);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fw-text: 465;
+    --fw-title: 785;
+    --color-bg: #000000;
+    --color-accent: #00cc14;
+    --color-stroke: #00cc14;
+    --color-like: #ff0000;
+    --bg-image: repeating-linear-gradient(
+        90deg,
+        #000000 0 2px,
+        transparent 2px 4px
+      ),
+      repeating-linear-gradient(180deg, #000000 0 2px, transparent 2px 4px),
+      linear-gradient(180deg, #007f0c 0.01%, #004306);
+  }
+}
