@@ -42,12 +42,7 @@
             <button type="button" data-theme="dark" class="theme-menu__button">Темно</button>
           </li>
           <li class="theme-menu__item">
-            <button
-              type="button"
-              data-theme="auto"
-              disabled
-              class="theme-menu__button"
-            >Авто</button>
+            <button type="button" data-theme="auto" disabled class="theme-menu__button">Авто</button>
           </li>
           <li class="theme-menu__item">
             <button type="button" data-theme="light" class="theme-menu__button">Светло</button>
@@ -647,14 +642,11 @@
           >Вставьте дискету, чтобы продолжить</span
         >
       </div>
-      <button
-        type="submit"
-        onclick="window.dialog.close()"
-        class="button dialog__button"
-        title="Продолжить"
-      >
-        <span class="button__text">ОК</span>
-      </button>
+      <form method="dialog">
+        <button type="submit" class="button dialog__button" title="Продолжить">
+          <span class="button__text">ОК</span>
+        </button>
+      </form>
     </dialog>
 
     <script src="./scripts/like.js"></script>
