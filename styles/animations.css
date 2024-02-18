@@ -28,48 +28,52 @@
 
 .core {
   fill: transparent;
-  transition: fill 0.3s ease-in-out;
+  transition: fill 0.3s linear 0.03s;
 }
 
 .main-body {
   fill: transparent;
-  transition: fill 0.3s ease-in-out 0.05s;
+  transition: fill 0.3s linear;
 }
 
 .contour {
-  transition: fill 0.3s ease-in-out 0.06s;
+  transition: fill 0.1s linear;
 }
 
 .like-icon:hover .core {
   fill: var(--color-accent);
-  transition: fill 0.3s ease-in-out 0.03s;
+  transition-delay: 0;
 }
 
 .like-icon:hover .main-body {
   fill: var(--color-accent);
+  transition-delay: 0.05s;
 }
 
 .like-icon:active .core {
   fill: var(--color-like);
-  transition: fill 0.3s ease-in-out 0.03s;
+  transition-delay: 0;
 }
 
 .like-icon:active .main-body {
   fill: var(--color-like);
+  transition-delay: 0.05s;
 }
 
 .like-icon.is-liked .core {
   fill: var(--color-like);
-  transition: fill 0.3s ease-in-out 0.03s;
+  transition-delay: 0;
 }
 
 .like-icon.is-liked .main-body {
   fill: var(--color-like);
+  transition-delay: 0.05s;
 }
 
 .like-icon.is-liked .contour {
   fill: var(--color-like);
-  transition: fill 0.1s linear;
+  transition-delay: 0.06s;
+  transition-duration: 0.3s;
 }
 
 @keyframes like-scale {

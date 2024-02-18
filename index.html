@@ -33,7 +33,7 @@
   </head>
   <body class="page">
     <header class="header">
-      <p class="title header__logo">&lt;/html&gt;</p>
+      <a class="title header__logo">&lt;/html&gt;</a>
       <h1 class="title header__title">закрывающий тег</h1>
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
@@ -63,7 +63,6 @@
                   src="./images/cat1.gif"
                   alt=""
                   class="card__image"
-                  loading="lazy"
                 />
                 <span class="card__label">&lt;/html&gt;</span>
               </div>
@@ -617,11 +616,9 @@
           </li>
         </ul>
       </section>
-    </main>
-    <footer class="footer">
       <button
         type="button"
-        class="button footer__save-button"
+        class="button save-button"
         title="Сохранить на память"
         onclick="window.dialog.showModal()"
         aria-controls="dialog"
@@ -629,18 +626,18 @@
         <svg viewBox="0 0 40 40" class="button__image">
           <use href="./svg/floppy.svg#floppy-icon"></use>
         </svg>
-        <span class="button__text">Сохранить на память</span>
+        <span class="button__text">Сохранить на&nbsp;память</span>
       </button>
-    </footer>
+    </main>
 
     <dialog id="dialog" aria-labelledby="dialog-name">
       <div class="dialog__info">
         <svg viewBox="0 0 40 40" width="39px" class="dialog__image">
           <use href="./svg/floppy.svg#floppy-icon"></use>
         </svg>
-        <span class="dialog__text" id="dialog-name"
-          >Вставьте дискету, чтобы продолжить</span
-        >
+        <p class="dialog__text" id="dialog-name">
+          Вставьте дискету, чтобы продолжить
+        </p>
       </div>
       <form method="dialog">
         <button type="submit" class="button dialog__button" title="Продолжить">

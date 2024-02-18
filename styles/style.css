@@ -45,8 +45,10 @@
 }
 
 .header__logo {
+  display: block;
   margin-block-end: 20px;
   font-size: clamp(3.063rem, 2.71rem + 1.5vw, 4.063rem);
+  text-decoration: none;
 }
 
 .header__title {
@@ -71,7 +73,7 @@
 .theme-menu__button {
   position: relative;
   text-transform: uppercase;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.3s ease;
 }
 
 .theme-menu__button:hover {
@@ -91,7 +93,7 @@
   width: calc(100% - 20px);
   height: 2px;
   background-color: currentColor;
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease;
   transform: scaleX(0);
   transform-origin: 0;
   inset-block-end: -2px;
@@ -116,6 +118,11 @@
   transform: scaleX(1);
 }
 
+.main {
+  width: var(--width-fluid);
+  margin-inline: auto;
+}
+
 .cards__list {
   display: flex;
   flex-direction: column;
@@ -126,7 +133,6 @@
 .card {
   display: flex;
   flex-direction: column;
-  width: var(--width-fluid);
   margin-inline: auto;
   background-color: var(--color-bg);
 }
@@ -174,6 +180,9 @@
 .card__image {
   display: block;
   width: 100%;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 1;
 }
 
 .card__image_filter_blur {
@@ -233,7 +242,7 @@
   font-size: 14px;
   line-height: 90%;
   background-color: var(--color-bg);
-  transition: box-shadow 0.2s ease;
+  transition: box-shadow 0.3s ease;
 }
 
 .button::before {
@@ -287,27 +296,22 @@
   padding-block: 10.7px;
 }
 
-.footer {
-  width: var(--width-fluid);
-  margin-inline: auto;
-  margin-block: 50px 100px;
-}
-
-.footer__save-button {
+.save-button {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 8px;
   margin-inline: auto;
+  margin-block: 50px 100px;
   padding-inline: 19px 21px;
   padding-block: 15px;
 }
 
-.footer__save-button .button__text {
+.save-button .button__text {
   padding-block-start: 4px;
 }
 
-.footer__save-button .button__image {
+.save-button .button__image {
   width: 21px;
 }
 
@@ -376,12 +380,12 @@
     inset-inline-end: 11px;
   }
 
-  .footer__save-button {
+  .save-button {
     flex-direction: column;
-    gap: 10px;
+    gap: 6px;
   }
 
-  .footer__save-button .button__image {
+  .save-button .button__image {
     width: 28px;
   }
 
