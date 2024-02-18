@@ -27,18 +27,8 @@
   min-block-size: 100dvb;
 }
 
-@supports (font-variation-settings: normal) {
-  .page {
-    font-variation-settings: "wght" var(--fw-text);
-  }
-
-  .card__title {
-    font-variation-settings: "wght" var(--fw-title);
-  }
-}
-
 .header {
-  width: clamp(23.438rem, 16.285rem + 30.52vw, 43.75rem);
+  width: var(--width-fluid);
   margin-inline: auto;
   margin-block: 100px;
   border: 2px solid var(--color-accent);
@@ -47,10 +37,9 @@
   background-color: var(--color-bg);
 }
 
-.logo,
 .title {
   font-family: var(--ff-accent);
-  font-weight: var(--fw-text);
+  font-weight: var(--fw-accent-text);
   text-align: center;
   text-transform: uppercase;
 }
@@ -69,7 +58,7 @@
   justify-content: center;
   padding-block: 24px;
   font-family: var(--ff-accent);
-  font-weight: var(--fw-text);
+  font-weight: var(--fw-accent-text);
   font-size: 14px;
 }
 
@@ -137,7 +126,7 @@
 .card {
   display: flex;
   flex-direction: column;
-  width: clamp(23.438rem, 16.285rem + 30.52vw, 43.75rem);
+  width: var(--width-fluid);
   margin-inline: auto;
   background-color: var(--color-bg);
 }
@@ -165,7 +154,7 @@
   opacity: 0.5;
   color: var(--color-accent);
   font-family: var(--ff-accent);
-  font-weight: var(--fw-text);
+  font-weight: var(--fw-accent-text);
   font-size: 14px;
   text-shadow: -1px 0 var(--color-stroke), 0 1px var(--color-stroke),
     1px 0 var(--color-stroke), 0 -1px var(--color-stroke);
@@ -240,7 +229,7 @@
   border: 2px solid var(--color-accent);
   color: var(--color-accent);
   font-family: var(--ff-accent);
-  font-weight: var(--fw-text);
+  font-weight: var(--fw-accent-text);
   font-size: 14px;
   line-height: 90%;
   background-color: var(--color-bg);
@@ -299,7 +288,7 @@
 }
 
 .footer {
-  width: clamp(23.438rem, 16.285rem + 30.52vw, 43.75rem);
+  width: var(--width-fluid);
   margin-inline: auto;
   margin-block: 50px 100px;
 }
@@ -331,8 +320,7 @@
 }
 
 #dialog::backdrop {
-  opacity: 0.75;
-  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .dialog__info {
@@ -351,7 +339,7 @@
 .dialog__text {
   color: var(--color-accent);
   font-family: var(--ff-accent);
-  font-weight: var(--fw-text);
+  font-weight: var(--fw-accent-text);
   font-size: 14px;
   line-height: 150%;
   text-transform: uppercase;
@@ -362,21 +350,25 @@
   padding-block: 9px;
 }
 
+@supports (font-variation-settings: normal) {
+  .page {
+    font-variation-settings: "wght" var(--fw-text);
+  }
+
+  .card__title {
+    font-variation-settings: "wght" var(--fw-title);
+  }
+}
+
 @media screen and (width <= 375px) {
-  .header {
+  .header,
+  .card,
+  .footer {
     width: 100%;
   }
 
   .header__logo {
     font-size: clamp(2.625rem, 0.08rem + 12.73vw, 3.063rem);
-  }
-
-  .card {
-    width: 100%;
-  }
-
-  .footer {
-    width: 100%;
   }
 
   .card__label {

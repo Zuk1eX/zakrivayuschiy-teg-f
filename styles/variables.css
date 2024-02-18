@@ -4,6 +4,7 @@
   --ff-accent: "PressStart2P", sans-serif;
   --fw-text: 400;
   --fw-title: 700;
+  --fw-accent-text: 400;
   --color-bg: #ffffff;
   --color-accent: #000000;
   --color-stroke: #ffffff;
@@ -15,4 +16,5 @@
     ),
     repeating-linear-gradient(180deg, #d3d3d3 0 2px, transparent 2px 4px),
     linear-gradient(180deg, #e7e7e7 0.01%, #1a1a1a);
+    --width-fluid: clamp(23.438rem, 16.285rem + 30.52vw, 43.75rem);
 }
